@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   title: {
@@ -44,7 +45,8 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mb-16 mx-auto px-2 flex-grow bg-red-100">
+            <Header />
+            <main className="container mb-16 mx-auto px-4 flex-grow bg-red-100">
               {children}
             </main>
           </div>
