@@ -17,7 +17,6 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
