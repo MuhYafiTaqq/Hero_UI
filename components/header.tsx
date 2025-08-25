@@ -12,6 +12,8 @@ import { Avatar } from "@heroui/avatar";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 
+import { Link } from "@heroui/link";
+
 import {
   TwitterIcon,
   GithubIcon,
@@ -23,14 +25,33 @@ import {
 
 export function Header() {
   return (
-    <header className="h-12 flex justify-between px-5 items-center w-full">
-        <p>
-            <Logo className="h-6 w-6 text-primary" />
-        </p>
+    <header className="h-12 flex justify-between px-5 items-center w-auto lg:h-16 lg:px-0 lg:container">
+        <div>
+            <Logo className="h-6 w-6 text-primary lg:hidden" />
+        </div>
         <div className="flex items-center gap-2">
-            <ThemeSwitch />
+            <div className="hidden sm:flex gap-2">
+                <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
+                    <TwitterIcon className="text-default-500" />
+                </Link>
+                <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
+                    <DiscordIcon className="text-default-500" />
+                </Link>
+                <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+                    <GithubIcon className="text-default-500" />
+                </Link>
+                <ThemeSwitch />
+            </div>
             <Button
-                className="text-xs font-normal text-default-600 bg-default-100 h-8 mr-1"
+                className="hidden text-xs font-normal text-default-600 bg-default-100 h-8 lg:h-10 lg:text-sm lg:flex"
+                href={siteConfig.links.sponsor}
+                startContent={<DiscordIcon className="text-green-600" />}
+                variant="flat"
+            >
+                Join Our Comunity
+            </Button>
+            <Button
+                className="text-xs font-normal text-default-600 bg-default-100 h-8 mr-1 lg:h-10 lg:text-sm"
                 href={siteConfig.links.sponsor}
                 startContent={<HeartFilledIcon className="text-danger" />}
                 variant="flat"
@@ -42,7 +63,7 @@ export function Header() {
                 <Avatar
                 isBordered
                 as="button"
-                className="transition-transform h-6 w-6"
+                className="transition-transform h-6 w-6 lg:h-10 lg:w-10"
                 color="secondary"
                 name="Jason Hughes"
                 src="https://i.pravatar.cc/150?u=a042581f4e29026704d"

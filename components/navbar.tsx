@@ -21,6 +21,15 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
+import {
+  TwitterIcon,
+  GithubIcon,
+  DiscordIcon,
+  HeartFilledIcon,
+  SearchIcon,
+  Logo,
+} from "@/components/icons";
+
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -33,10 +42,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="flex fixed w-full h-16 bottom-0 bg-black py-1 px-3">
-      <div className="container mx-auto items-center justify-between h-full grid grid-cols-5">
+    <nav className="flex fixed w-full h-16 bottom-0 bg-black dark:bg-[#191919] py-1 px-3 lg:h-full lg:w-22 lg:px-1 lg:py-4">
+      <div className="container mx-auto items-center justify-between grid grid-cols-5 lg:grid-cols-1 lg:justify-start lg:flex lg:flex-col lg:gap-1">
+        <Logo className="h-16 w-16 text-white hidden lg:block lg:mb-4" />
         {navItems.map(item => (
-          <Link className={`size-full ${pathname === item.href ? 'bg-white text-black' : 'bg-black text-white hover:bg-white/20'} transition flex items-center justify-center rounded-lg flex-col p-0 gap-1`} href={item.href} key={item.key}>
+          <Link className={`size-full ${pathname === item.href ? 'bg-white text-black' : 'text-white hover:bg-white/20'} transition flex items-center justify-center rounded-lg flex-col p-0 gap-1 lg:h-16`} href={item.href} key={item.key}>
             <Image
               src={`/NavBar-Icon/${item.key}${pathname === item.href ? "-active" : ""}.svg`}
               alt={item.key}
