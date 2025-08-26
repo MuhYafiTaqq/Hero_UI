@@ -25,19 +25,19 @@ import {
 
 export function Header() {
   return (
-    <header className="h-12 flex justify-between px-5 items-center w-auto lg:h-16 lg:px-0 lg:container">
+    <header className="h-12 flex justify-between px-5 items-center w-auto lg:h-16 lg:container lg:mx-auto">
         <div>
             <Logo className="h-6 w-6 text-primary lg:hidden" />
         </div>
         <div className="flex items-center gap-2">
-            <div className="hidden sm:flex gap-2">
-                <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-                    <TwitterIcon className="text-default-500" />
+            <div className="flex gap-2">
+                <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter} className="hidden lg:flex">
+                <TwitterIcon className="text-default-500" />
                 </Link>
-                <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
+                <Link isExternal aria-label="Discord" href={siteConfig.links.discord} className="hidden lg:flex">
                     <DiscordIcon className="text-default-500" />
                 </Link>
-                <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+                <Link isExternal aria-label="Github" href={siteConfig.links.github} className="hidden lg:flex">
                     <GithubIcon className="text-default-500" />
                 </Link>
                 <ThemeSwitch />
