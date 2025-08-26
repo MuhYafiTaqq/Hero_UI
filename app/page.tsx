@@ -26,8 +26,8 @@ export default function Home() {
           <span className="text-2xl font-bold">The best platform to cut your images, <span className="text-violet-500">twizzcutter.com</span></span>
         </div>
         <div className="row-span-9 text-center justify-center items-center flex flex-col px-4 gap-4 order-3">
+            <Chip radius="sm" variant="shadow" startContent={<BookOpen className="h-4 w-4" size={16} />} className="mb-2 font-bold pl-3">My Blog !!</Chip>
           <div className="w-full">
-            <Chip radius="sm" variant="shadow" startContent={<BookOpen className="h-4 w-4" size={16} />} className="mb-6 font-bold pl-3">My Blog !!</Chip>
             <Link className="text-sm text-default-500">Cara Membuat Postingan Bersambung? <SquareArrowOutUpRight className="h-4 w-4 ml-2" size={16} /></Link>
             <Divider className="my-3 w-4/5 mx-auto" />
             <Link className="text-sm text-default-500">Perbedaan WithGap dan Without Gap? <SquareArrowOutUpRight className="h-4 w-4 ml-2" size={16} /></Link>

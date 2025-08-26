@@ -38,12 +38,12 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "h-screen overflow-hidden text-foreground bg-background font-sans antialiased",
+          "h-dvh overflow-hidden text-foreground bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex flex-col h-dvh">
             <Navbar />
             <div className="lg:pl-22">
               <Header />
