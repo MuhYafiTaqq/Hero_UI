@@ -38,7 +38,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "h-dvh overflow-hidden text-foreground bg-background font-sans antialiased",
+          "h-dvh text-foreground bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
@@ -48,7 +48,7 @@ export default function RootLayout({
             <div className="lg:pl-22">
               <Header />
             </div>
-            <main className="mb-16 flex flex-1 lg:mb-0 lg:ml-22">
+            <main className="pb-16 pt-12 flex flex-1 lg:pb-0 lg:ml-22 lg:pt-16">
               {children}
             </main>
           </div>

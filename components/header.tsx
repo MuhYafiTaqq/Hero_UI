@@ -18,16 +18,15 @@ import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
+  HeartFilledIcon
 } from "@/components/icons";
+import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="h-12 flex justify-between px-5 items-center w-auto lg:h-16 lg:container lg:mx-auto">
+    <header className="h-12 fixed top-0 left-0 right-0 flex justify-between px-5 items-center bg-white dark:bg-black z-10 w-auto lg:h-16 lg:container lg:mx-auto">
         <div>
-            <Logo className="h-6 w-6 text-primary lg:hidden" />
+            <Image src="/logo.png" alt="Logo" width={100} height={100} className="h-6 w-6 text-primary lg:hidden" />
         </div>
         <div className="flex items-center gap-2">
             <div className="flex gap-2">
@@ -44,7 +43,7 @@ export function Header() {
             </div>
             <Button
                 className="hidden text-xs font-normal text-default-600 bg-default-100 h-8 lg:h-10 lg:text-sm lg:flex"
-                href={siteConfig.links.sponsor}
+                // href={}
                 startContent={<DiscordIcon className="text-green-600" />}
                 variant="flat"
             >
@@ -52,7 +51,7 @@ export function Header() {
             </Button>
             <Button
                 className="text-xs font-normal text-default-600 bg-default-100 h-8 mr-1 lg:h-10 lg:text-sm"
-                href={siteConfig.links.sponsor}
+                // href={}
                 startContent={<HeartFilledIcon className="text-danger" />}
                 variant="flat"
             >
