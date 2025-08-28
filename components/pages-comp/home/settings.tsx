@@ -166,7 +166,7 @@ export default function HomeSettings({
 
   const handleCrop = async () => {
     setLoading(true);
-        try {
+      try {
       const { error } = await supabase.from("crop_image").insert({});
       // Jika error, log saja (tidak tampil ke user)
       if (error) {
